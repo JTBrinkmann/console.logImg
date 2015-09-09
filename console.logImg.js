@@ -14,7 +14,7 @@ console.logImg = function(src, customWidth, customHeight){
   def = $.Deferred();
   drawImage = function(w, h){
     if (window.chrome) {
-      console.log("%c\u200B", "color: transparent;line-height: " + h + "px;font-size: 1px;background: linear-gradient(transparent,transparent),url(" + src + ");padding: " + h / 2 + "px " + w / 2 + "px");
+      console.log("%c\u200B", "color: transparent;line-height: " + h + "px;font-size: 1px;background: none,url(" + src + ");padding: " + h / 2 + "px " + w / 2 + "px");
     } else {
       console.log("%c", "background: url(" + src + ") no-repeat; display: block;width: " + w + "px; height: " + h + "px;");
     }

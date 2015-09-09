@@ -16,9 +16,10 @@ console.logImg = (src, customWidth, customHeight) !->
             console.log "%c\u200B", "color: transparent;
                 line-height: #{h}px;
                 font-size: 1px;
-                background: linear-gradient(transparent,transparent),url(#src);
+                background: none,url(#src);
                 padding: #{h / 2}px #{w / 2}px
-            " # 0.854 seems to work perfectly. Kind of a magic number, I guess.
+            "
+            # using `background: none,` to bypass a restriction in Chrome (added somewhere between v25 and v35) not allowing CSS values to start with `url(`
         else # apparently this once worked in Firefox
             console.log "%c", "background: url(#src) no-repeat; display: block;
                 width: #{w}px; height: #{h}px;
